@@ -1,0 +1,13 @@
+[Unit]
+Description=Tempest weather station observation collector
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/storage/weather
+ExecStart=/usr/bin/python3 /storage/weather/tempest_collector.py
+StandardOutput=journal
+StandardError=journal
+
+ReadWritePaths=/var/tmp

@@ -1,0 +1,11 @@
+[Unit]
+Description=Run Tempest weather collector every minute
+Requires=tempest-collector.service
+
+[Timer]
+OnCalendar=*-*-* *:*:00
+AccuracySec=1s
+Persistent=true
+
+[Install]
+WantedBy=timers.target

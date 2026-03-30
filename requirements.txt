@@ -1,0 +1,4 @@
+colorlog
+pymysql
+python-dotenv
+requests
